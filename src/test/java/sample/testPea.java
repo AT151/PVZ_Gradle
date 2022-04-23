@@ -38,4 +38,27 @@ public class testPea {
         Assertions.assertEquals(1001, pea.getX());
     }
 
+    @Test
+    public void testGetDamage() {
+        Assertions.assertEquals(25, pea.getDamage());
+    }
+
+    @Test
+    public void testSetSpeed() {
+        pea.setSpeed(3);
+        Assertions.assertEquals(3, pea.getSpeed());
+    }
+
+    @Test
+    public void testSetX() {
+        pea.setX(22);
+        Assertions.assertEquals(22, pea.getX());
+    }
+
+    @Test
+    public void testSetY() {
+        pea.setY(194);
+        Assertions.assertEquals(194, pea.getY());
+    }
+
 }

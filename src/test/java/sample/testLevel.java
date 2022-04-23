@@ -75,6 +75,13 @@ public class testLevel {
         Assertions.assertEquals(424.26406871193, level.dist(a, b), 0.0001);
     }
 
+    @Test
+    public void testSetName() {
+        Assertions.assertEquals("User", level.getName());
+        level.setName("Another");
+        Assertions.assertEquals("Another", level.getName());
+    }
+
     // Throw exception because of JavaFX elements not initialized
 //    // Test helper with x and y under cutoff thresholds
 //    @Test
