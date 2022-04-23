@@ -2,6 +2,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -71,9 +72,26 @@ public class LoginGUITest {
     }
 
     @Test
+    void testPressNewUserThenSubmitWithText(FxRobot robot) {
+        robot.clickOn("#newu");
+        verifyThat("#pane", isVisible());
+        robot.clickOn("#tf_input").type(KeyCode.C, KeyCode.O,KeyCode.C, KeyCode.K);
+        robot.clickOn("SUBMIT");
+
+    }
+
+    @Test
     void testPressExistingUserNoExistingUsers(FxRobot robot) {
         robot.clickOn("#existingu");
         verifyThat("No User Saved Currently", isVisible());
+    }
+
+    @Test
+    void testPressExit(FxRobot robot) {
+        robot.clickOn("#exit");
+        verifyThat("Do you want to exit the game?", isVisible());
+        verifyThat("Yes", isVisible());
+        verifyThat("No", isVisible());
     }
 
 
