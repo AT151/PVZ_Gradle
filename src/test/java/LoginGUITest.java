@@ -4,6 +4,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.testfx.framework.junit5.ApplicationExtension;
@@ -21,14 +22,11 @@ import java.util.ArrayList;
 
 @ExtendWith(ApplicationExtension.class)
 public class LoginGUITest {
-    private transient Stage guiStage;
-    private transient Parent root;
-
+    Parent root;
 
     @Start
     void onStart(Stage stage) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/Login.fxml"));
-        guiStage = stage;
         stage.setScene(new Scene(root,950,600));
         stage.show();
     }
@@ -73,17 +71,18 @@ public class LoginGUITest {
 
     @Test
     void testPressNewUserThenSubmitWithText(FxRobot robot) {
+        Scene initScene = root.getScene();
         robot.clickOn("#newu");
         verifyThat("#pane", isVisible());
         robot.clickOn("#tf_input").type(KeyCode.C, KeyCode.O,KeyCode.C, KeyCode.K);
         robot.clickOn("SUBMIT");
-
     }
 
     @Test
     void testPressExistingUserNoExistingUsers(FxRobot robot) {
         robot.clickOn("#existingu");
         verifyThat("No User Saved Currently", isVisible());
+        robot.clickOn("OK");
     }
 
     @Test
@@ -92,6 +91,7 @@ public class LoginGUITest {
         verifyThat("Do you want to exit the game?", isVisible());
         verifyThat("Yes", isVisible());
         verifyThat("No", isVisible());
+        robot.clickOn("No");
     }
 
 
