@@ -117,4 +117,11 @@ public class AfterLoginGUITest {
     void testHasExitButton() {
         verifyThat("#exit", hasText("Exit"));
     }
+
+    @Test
+    void testPressExit(FxRobot robot) {
+        robot.clickOn("#exit");
+        verifyThat("Do you want to exit the game?", isVisible());
+        robot.clickOn("No");
+    }
 }

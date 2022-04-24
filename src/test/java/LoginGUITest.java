@@ -94,6 +94,4 @@ public class LoginGUITest {
         robot.clickOn("No");
     }
 
-
-
 }
