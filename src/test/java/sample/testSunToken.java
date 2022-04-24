@@ -47,4 +47,38 @@ public class testSunToken {
         Assertions.assertThrows(Exception.class, () -> sunToken.act());
     }
 
+    @Test
+    public void testSetLastDropped() {
+        sunToken.setLastdropped(20);
+        Assertions.assertEquals(20, sunToken.getLastdropped(), 0.0001);
+    }
+
+    // General Actor tests
+
+    @Test
+    public void testSetDead() {
+        sunToken.setDead(true);
+        Assertions.assertTrue(sunToken.isDead());
+        sunToken.setDead(false);
+        Assertions.assertFalse(sunToken.isDead());
+    }
+
+    @Test
+    public void testSetSpeed() {
+        sunToken.setSpeed(3);
+        Assertions.assertEquals(3, sunToken.getSpeed());
+    }
+
+    @Test
+    public void testSetX() {
+        sunToken.setX(22);
+        Assertions.assertEquals(22, sunToken.getX());
+    }
+
+    @Test
+    public void testSetY() {
+        sunToken.setY(194);
+        Assertions.assertEquals(194, sunToken.getY());
+    }
+
 }

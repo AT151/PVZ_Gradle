@@ -38,4 +38,37 @@ public class testBullet {
         Assertions.assertEquals(1001, bullet.getX());
     }
 
+    @Test
+    public void testGetDamage() {
+        Assertions.assertEquals(60, bullet.getDamage());
+    }
+
+    // General Actor tests
+
+    @Test
+    public void testSetDead() {
+        bullet.setDead(true);
+        Assertions.assertTrue(bullet.isDead());
+        bullet.setDead(false);
+        Assertions.assertFalse(bullet.isDead());
+    }
+
+    @Test
+    public void testSetSpeed() {
+        bullet.setSpeed(3);
+        Assertions.assertEquals(3, bullet.getSpeed());
+    }
+
+    @Test
+    public void testSetX() {
+        bullet.setX(22);
+        Assertions.assertEquals(22, bullet.getX());
+    }
+
+    @Test
+    public void testSetY() {
+        bullet.setY(194);
+        Assertions.assertEquals(194, bullet.getY());
+    }
+
 }

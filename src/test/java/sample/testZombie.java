@@ -81,4 +81,58 @@ public class testZombie {
         Assertions.assertEquals(100, zombie.getHealth());
         Assertions.assertThrows(Exception.class, () -> zombie.decreaseHealth(-1));
     }
+
+    // Fails. Last attack not initialized correctly
+    @Test
+    public void testSetLastAttack() {
+        Assertions.assertEquals(250, zombie.getLastattack());
+        zombie.setLastattack(80);
+        Assertions.assertEquals(80, zombie.getLastattack());
+    }
+
+    @Test
+    public void testSetAttackWaitingTime() {
+        Assertions.assertEquals(1, zombie.get_attack_waiting_time());
+        zombie.set_attack_waiting_time(2);
+        Assertions.assertEquals(2, zombie.get_attack_waiting_time());
+    }
+
+    // Tests if zombie can be set to move right
+    // Fails, still sets
+    @Test
+    public void testSetSpeedRight() {
+        Assertions.assertEquals(-5, zombie.getSpeed());
+        Assertions.assertThrows(Exception.class, () -> zombie.setSpeed(5));
+    }
+
+    // General Actor tests
+
+    @Test
+    public void testSetDead() {
+        zombie.setDead(true);
+        Assertions.assertTrue(zombie.isDead());
+        zombie.setDead(false);
+        Assertions.assertFalse(zombie.isDead());
+    }
+
+    @Test
+    public void testSetSpeed() {
+        Assertions.assertEquals(-5, zombie.getSpeed());
+        zombie.setSpeed(-3);
+        Assertions.assertEquals(-3, zombie.getSpeed());
+    }
+
+    @Test
+    public void testSetX() {
+        Assertions.assertEquals(200, zombie.getX());
+        zombie.setX(22);
+        Assertions.assertEquals(222, zombie.getX());
+    }
+
+    @Test
+    public void testSetY() {
+        Assertions.assertEquals(200, zombie.getY());
+        zombie.setY(194);
+        Assertions.assertEquals(394, zombie.getY());
+    }
 }

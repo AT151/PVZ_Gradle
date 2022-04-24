@@ -68,4 +68,22 @@ public class testLawnmower {
         Assertions.assertEquals(1001, lawnmower.getX());
         Assertions.assertTrue(lawnmower.isDead());
     }
+
+    @Test
+    public void testSetSpeed() {
+        lawnmower.setSpeed(3);
+        Assertions.assertEquals(3, lawnmower.getSpeed());
+    }
+
+    @Test
+    public void testSetX() {
+        lawnmower.setX(22);
+        Assertions.assertEquals(22, lawnmower.getX());
+    }
+
+    @Test
+    public void testSetY() {
+        lawnmower.setY(194);
+        Assertions.assertEquals(194, lawnmower.getY());
+    }
 }
