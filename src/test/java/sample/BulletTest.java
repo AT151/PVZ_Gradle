@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class testBullet {
+public class BulletTest {
     Bullet bullet;
 
     @BeforeEach
@@ -69,6 +69,11 @@ public class testBullet {
     public void testSetY() {
         bullet.setY(194);
         Assertions.assertEquals(194, bullet.getY());
+    }
+
+    @Test
+    public void testGetRow() {
+        Assertions.assertEquals(0, bullet.getRow());
     }
 
 }

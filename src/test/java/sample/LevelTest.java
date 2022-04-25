@@ -1,12 +1,15 @@
 package sample;
 
+import javafx.stage.Stage;
+import javafx.stage.Window;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
-public class testLevel {
+public class LevelTest {
     Level level;
 
     @BeforeEach

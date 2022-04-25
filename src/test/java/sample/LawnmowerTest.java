@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class testLawnmower {
+public class LawnmowerTest {
     Lawnmower lawnmower;
 
     @BeforeEach
@@ -85,5 +85,10 @@ public class testLawnmower {
     public void testSetY() {
         lawnmower.setY(194);
         Assertions.assertEquals(194, lawnmower.getY());
+    }
+
+    @Test
+    public void testGetRow() {
+        Assertions.assertEquals(0, lawnmower.getRow());
     }
 }

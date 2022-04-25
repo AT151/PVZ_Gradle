@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class testZombie {
+public class ZombieTest {
     Zombie zombie;
 
     @BeforeEach
@@ -84,8 +84,12 @@ public class testZombie {
 
     // Fails. Last attack not initialized correctly
     @Test
-    public void testSetLastAttack() {
+    public void testGetLastAttack() {
         Assertions.assertEquals(250, zombie.getLastattack());
+    }
+
+    @Test
+    public void testSetLastAttack() {
         zombie.setLastattack(80);
         Assertions.assertEquals(80, zombie.getLastattack());
     }
@@ -135,4 +139,15 @@ public class testZombie {
         zombie.setY(194);
         Assertions.assertEquals(394, zombie.getY());
     }
+
+    @Test
+    public void testGetRow() {
+        Assertions.assertEquals(0, zombie.getRow());
+    }
+
+    @Test
+    public void testGetDamage() {
+        Assertions.assertEquals(50, zombie.getDamage());
+    }
+
 }

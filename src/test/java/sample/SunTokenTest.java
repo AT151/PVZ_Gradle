@@ -4,12 +4,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class testSunToken {
+public class SunTokenTest {
     SunToken sunToken;
+    SunToken sunTokenFlower;
 
     @BeforeEach
     public void setUp() {
         sunToken = new SunToken(0, 0, 30);
+        sunTokenFlower = new SunToken(50, 20);
     }
 
     // Test that act increases Y by speed when y under limit
@@ -79,6 +81,12 @@ public class testSunToken {
     public void testSetY() {
         sunToken.setY(194);
         Assertions.assertEquals(194, sunToken.getY());
+    }
+
+    @Test
+    public void testGetValue() {
+        Assertions.assertEquals(25, sunToken.getValue());
+        Assertions.assertEquals(50, sunTokenFlower.getValue());
     }
 
 }
