@@ -25,7 +25,7 @@ public class LoginManager implements Serializable {
             l=(LoginManager) in.readObject();
             return l.u;
         }
-        catch(IOException e){
+        catch(Exception e){
             return new ArrayList<>();
         }
         finally {

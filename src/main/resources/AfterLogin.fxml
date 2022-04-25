@@ -71,7 +71,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="tf_heading" alignment="CENTER" editable="false" focusTraversable="false" layoutX="301.0" layoutY="187.0" prefHeight="86.0" prefWidth="396.0" style="-fx-background-color: fjdnfjnvjfv;" text="SAVED     GAMES">
+            <TextField fx:id="tf_heading" alignment="CENTER" editable="false" focusTraversable="false" layoutX="301.0" layoutY="187.0" prefHeight="86.0" prefWidth="396.0" style="-fx-background-color: pink;" text="SAVED     GAMES">
                <effect>
                   <Lighting bumpInput="$null" />
                </effect>

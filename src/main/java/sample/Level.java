@@ -171,6 +171,7 @@ public class Level implements Serializable {
     }
     public void set_root(Parent root){ this.root=root;}
 
+    // unit
     public void menu(){
         if(menu_pane.isVisible()) {
             menu_pane.setVisible(false);
@@ -185,6 +186,7 @@ public class Level implements Serializable {
         }
     }
 
+    // unit
     public void exit_button(){
         Alert alert = new Alert(Alert.AlertType.NONE, "Do you want to exit the game?", ButtonType.YES, ButtonType.NO);
         alert.showAndWait();
@@ -193,6 +195,7 @@ public class Level implements Serializable {
         }
     }
 
+    //unit
     public void mouse_click(MouseEvent mouseEvent) {
         menu_click=true;
         lastclick=((ImageView) mouseEvent.getSource()).getId();
@@ -200,6 +203,7 @@ public class Level implements Serializable {
         System.out.println(lastclick);
     }
 
+    // Unit test
     public void startGame() throws IOException {
         Scene scene=new Scene(root,950,600);
         window.setScene(scene);
@@ -214,6 +218,7 @@ public class Level implements Serializable {
         gameloop();
     }
 
+    // Unit test
     private void add_sun_from_sky() throws FileNotFoundException {
         int x1, y1, limit;
         x1 = 210 + r.nextInt(640);
@@ -640,6 +645,7 @@ public class Level implements Serializable {
         timer.start();
     }
 
+    // Unit
     public Boolean addnewplant(int x, int y) throws FileNotFoundException {
         String id=lastclick;
         int _x=161+76*(x+1);
@@ -760,6 +766,7 @@ public class Level implements Serializable {
         return false;
     }
 
+    //Unit
     public void drop_here(MouseEvent event){
         if(!menu_click){
             return;
@@ -769,6 +776,7 @@ public class Level implements Serializable {
         helper(x,y);
     }
 
+    //Unit
     public void helper(double x, double y) {
         if(!menu_click)
             return;
@@ -814,6 +822,7 @@ public class Level implements Serializable {
         lastclick=null;
     }
 
+    //unit
     public void prepare_lawnmowers(){
         for(int i=0;i<5;i++){
             ImageView tempp = new ImageView();
@@ -836,6 +845,7 @@ public class Level implements Serializable {
         Login.l.serialize();
     }
 
+    // unit
     public double dist(Actor a, Actor b){
         return Math.sqrt((a.getX()-b.getX())*(a.getX()-b.getX()) + (a.getY()-b.getY())*(a.getY()-b.getY()));
     }
