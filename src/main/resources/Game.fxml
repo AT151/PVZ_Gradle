@@ -23,7 +23,7 @@
             <Image url="@lawn.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="45.0" fitWidth="148.0" layoutX="778.0" layoutY="19.0" onMouseClicked="#menu" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="menu_button" fitHeight="45.0" fitWidth="148.0" layoutX="778.0" layoutY="19.0" onMouseClicked="#menu" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/menu-button.png" />
          </image>
