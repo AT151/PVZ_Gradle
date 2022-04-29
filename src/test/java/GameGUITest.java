@@ -30,7 +30,6 @@ public class GameGUITest {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Game.fxml"));
 
         Parent root = loader.load();
-        stage.setScene(new Scene(root,950,600));
         stage.show();
         l=loader.getController();
         l.set_window(stage);
