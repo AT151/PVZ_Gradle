@@ -1,8 +1,6 @@
 package sample;
 
 import org.junit.jupiter.api.Test;
-import sample.SunFlower;
-import sample.Walnut;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

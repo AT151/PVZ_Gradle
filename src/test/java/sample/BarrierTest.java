@@ -1,10 +1,6 @@
 package sample;
 
 import org.junit.jupiter.api.Test;
-import sample.Barrier;
-import sample.Peashooter;
-import sample.Shooter;
-import sample.Walnut;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

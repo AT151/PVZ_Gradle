@@ -3,8 +3,6 @@ package sample;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.junit.jupiter.api.Test;
-import sample.Actor;
-import sample.Walnut;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

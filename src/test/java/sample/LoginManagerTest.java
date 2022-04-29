@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginManagerTest {
 
+    // Fails, save/load not implemented correctly
     @Test
     public void loadTest() throws IOException, ClassNotFoundException {
         LoginManager loginManager = new LoginManager();

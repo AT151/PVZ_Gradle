@@ -1,8 +1,6 @@
 package sample;
 
 import org.junit.jupiter.api.Test;
-import sample.Peashooter;
-import sample.Plant;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
